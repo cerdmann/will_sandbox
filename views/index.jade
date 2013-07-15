@@ -1,0 +1,80 @@
+doctype 5
+html(lang="en")
+	head
+		title= title
+		script(type='text/javascript')
+			function move()
+			{  
+				var dark_talon = document.getElementById("Dark_Talon"); 
+				var tim = setTimeout("move()",10);  
+				for (var i=400;i>0;i--)
+				{
+					dark_talon.style.top = "100px";
+					dark_talon.style.left = i.toString() + "px";
+				} 
+
+			}
+			function move_up()
+			{  
+				var dark_talon_image = document.getElementById("Dark_Talon"); 
+
+				var dark_talon_top = dark_talon_image.style.top;
+
+				var dark_talon_top_number = parseInt(dark_talon_top);
+
+				dark_talon_image.style.top = (dark_talon_top_number - 5) + "px";
+
+			}
+			function move_down()
+			{  
+				var dark_talon_image = document.getElementById("Dark_Talon"); 
+
+				var dark_talon_top = dark_talon_image.style.top;
+
+				var dark_talon_top_number = parseInt(dark_talon_top);
+
+				dark_talon_image.style.top = (dark_talon_top_number + 5) + "px";
+
+			}
+			function move_right()
+			{  
+				var dark_talon_image = document.getElementById("Dark_Talon"); 
+
+				var dark_talon_left = dark_talon_image.style.left;
+
+				var dark_talon_left_number = parseInt(dark_talon_left);
+
+				dark_talon_image.style.left = (dark_talon_left_number + 5) + "px";
+
+			}
+			function move_left()
+			{  
+				var dark_talon_image = document.getElementById("Dark_Talon"); 
+
+				var dark_talon_left = dark_talon_image.style.left;
+
+				var dark_talon_left_number = parseInt(dark_talon_left);
+
+				dark_talon_image.style.left = (dark_talon_left_number - 5) + "px";
+
+			}
+			function reset()
+			{  
+				var dark_talon_image = document.getElementById("Dark_Talon"); 
+
+				dark_talon_image.style.left = "400px";
+				dark_talon_image.style.top  = "100px";
+
+			}
+	body
+		h1= title
+		input(type='button', value='Move Up', id='button_move_ship_up', onclick='move_up();')
+		input(type='button', value='Move Down', id='button_move_ship_down', onclick='move_down();')
+		img(id='Dark_Talon', src='images/DarkTalon.jpg', style='position: absolute; top: 100px; left: 400px;')
+		input(type='button', value='Move Right', id='button_move_ship_right', onclick='move_right();')
+		input(type='button', value='Move Left', id='button_move_ship_left', onclick='move_left();')
+		input(type='button', value='Reset', id='button_reset_ship', onclick='reset();')
+
+
+
+

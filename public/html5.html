@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Will</title>
+    <style>
+        #myCanvas
+        {
+            border: 10px solid greenyellow;
+             ctx.fillStyle = "000000";
+        }
+    </style>
+    <script>
+        window.onload = function()
+        {
+            var myCanvas = document.getElementById('myCanvas');
+            var ctx = myCanvas.getContext("2d");
+            
+            ctx.beginPath();
+            ctx.fillStyle = "#B22222";
+            ctx.strokeStyle = "#B22222"
+            ctx.lineWidth = 20;
+            ctx.arc(500,150, 100, 0, Math.PI*2, true)
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.fillStyle = "#FFD700";
+            ctx.strokeStyle = "#FFD700"
+            ctx.lineWidth = 20;
+            ctx.arc(500,400, 100, 0, Math.PI*2, true)
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.fillStyle = "#008000";
+            ctx.strokeStyle = "#008000"
+            ctx.lineWidth = 20;
+            ctx.arc(500,650, 100, 0, Math.PI*2, true)
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            
+                       
+            
+        }
+    </script>
+</head>
+    
+<body>
+<canvas id="myCanvas" width="1000" height="800"></canvas>
+    
+    
+    
+</body>
+</html>
